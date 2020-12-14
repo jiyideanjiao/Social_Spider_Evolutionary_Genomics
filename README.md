@@ -42,6 +42,10 @@ Trinity \
 ### Phylotranscriptomic Analysis
 
 ### Molecular Evolution Analysis
+1. Rate of molecular evolution estimation
+
+2. Test for selection
+
 
 ### RERconverge Analysis
 
