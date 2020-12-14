@@ -36,3 +36,12 @@ Trinity \
 --normalize_max_read_cov 100
 ```
 - output files: Aexl.fasta (fasta format)
+
+### Gene Orthology
+
+### Phylotranscriptomic Analysis
+
+### Molecular Evolution Analysis
+
+### RERconverge Analysis
+
