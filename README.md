@@ -1,6 +1,6 @@
 ### Comparative genomics analysis of social spiders
 
-- Author: Chao Tong
+- Authors: Chao Tong, Leticia Avilés, Linda S. Rayor, Alexander S. Mikheyev, Timothy A. Linksvayer 
 - Date: Dec-12-2020
 
 - Project description:
