@@ -1,4 +1,4 @@
-### Comparative genomics analysis of social spiders
+### Genomic signatures of the convergent evolution of sociality in spiders
 
 - Authors: Chao Tong, Leticia Avilés, Linda S. Rayor, Alexander S. Mikheyev, Timothy A. Linksvayer 
 - Date: Dec-12-2020
