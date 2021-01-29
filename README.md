@@ -7,7 +7,7 @@
 - We perform this comparative genomics study to determine if there is a consistent genomic signature of protein-coding sequence evolution associated with the convergent evolution of sociality in spiders.
 
 - Code for submission:
-- Genomic signatures of the convergent evolution of sociality in spiders. biorxiv, 2020 [link](www)
+- Genomic signatures of the convergent evolution of sociality in spiders. biorxiv, 2020 [link](https://www.biorxiv.org/content/10.1101/2021.01.27.428473v1)
 
 
 ### Transcriptome Assembly
