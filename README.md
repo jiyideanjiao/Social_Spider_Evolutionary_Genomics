@@ -18,18 +18,8 @@ conda install -c bioconda trinity
 start *de novo* assembly
 
 ```
-Trinity \
---trimmomatic \
---seqType fq \
---max_memory 20G \
---left left.fq \
---right right.fq \
---CPU 20 \
---output trinity_output \
---no_bowtie \
---quality_trimming_params "SLIDINGWINDOW:4:20 LEADING:10 TRAILING:10 MINLEN:70"  \
---normalize_reads \
---normalize_max_read_cov 100
+sbatch trinity.sh
+
 ```
 - output files: Aexl.fasta (fasta format)
 
