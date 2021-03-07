@@ -4,17 +4,13 @@
 - Date: Jan-28-2021
 
 - Project description:
-- We perform this comparative genomics study to determine if there is a consistent genomic signature of protein-coding sequence evolution associated with the convergent evolution of sociality in spiders.
-
-- Code for submission:
-- Genome-wide, genic, and site-specific changes associated with the convergent evolution of sociality in spiders. biorxiv, 2020 [link](https://www.biorxiv.org/content/10.1101/2021.01.27.428473v1)
+- We perform this comparative genomics study to determine if there is consistent genomic signatures of protein-coding sequence evolution associated with the convergent evolution of sociality in spiders.
 
 
 ### Transcriptome Assembly
 
 - introduction to **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 - install **Trinity** via **conda**
-- I love conda! :heart_eyes:
 
 ```
 conda install -c bioconda trinity
