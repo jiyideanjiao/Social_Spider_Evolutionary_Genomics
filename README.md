@@ -1,4 +1,4 @@
-### Comparative Genomics of Social Spiders
+### Genomic signatures of recent convergent transitions to social life in spiders
 
 - Authors: Chao Tong
 - Date: March-7-2021
