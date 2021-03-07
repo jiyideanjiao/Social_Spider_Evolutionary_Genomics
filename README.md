@@ -15,7 +15,7 @@
 ```
 conda install -c bioconda trinity
 ```
-start *de novo* assembly
+- start *de novo* assembly
 
 ```
 sbatch trinity.sh
