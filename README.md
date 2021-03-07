@@ -16,9 +16,9 @@
 conda install -c bioconda trinity
 ```
 start *de novo* assembly
+
 ```
 sbatch trinity.sh
-
 ```
 - output files: Aexl.fasta (fasta format)
 
