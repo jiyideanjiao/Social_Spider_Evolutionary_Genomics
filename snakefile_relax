@@ -1,0 +1,11 @@
+OGG, = glob_wildcards("{ogg}.phy")
+THREADS = 1
+
+rule all:
+	input: expand("{ogg}.out",ogg=OGG)
+
+rule relax:
+	input: "{ogg}.phy"
+        output: "{ogg}.out"
+        threads: 1
+        shell: "hyphy relax --code Universal --alignment {input} --tree {wildcards.ogg}.tre --models All --test social > {output}"
