@@ -29,6 +29,11 @@ snakemake --cores=1 -s snakefile_ogg
 ```
 - 2. OrthoFinder [link](https://github.com/davidemms/OrthoFinder)
 
+```
+orthofinder -f {path}/folder
+orthofinder -b {path}/folder
+```
+
 ### Phylotranscriptomic Analysis
 
 ### Molecular Evolution Analysis
