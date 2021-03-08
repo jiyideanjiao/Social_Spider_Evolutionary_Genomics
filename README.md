@@ -7,7 +7,7 @@
 - We perform this comparative genomics study to determine if there is consistent genomic signatures of protein-coding sequence evolution associated with the convergent evolution of sociality in spiders.
 
 
-### Assembly and annotation
+### Assembly and Annotation
 
 - introduction to **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 - install **Trinity** via **conda**
@@ -74,6 +74,12 @@ java -jar astral.5.7.5.jar -i in.tree -o out.tre
 
 ### Molecular Evolution Analysis
 1. Rate of molecular evolution estimation
+- 1. codon alignment construction with PAL2NAL [link](http://www.bork.embl.de/pal2nal/)
+input1: amino acid sequence alignment
+input2: DNA sequence
+```
+sbatch pal2nal.sh
+```
 
 2. Test for selection
 
