@@ -55,6 +55,14 @@ orthofinder -b {path}/folder
 ```
 clustalo -i input.fa -o output.aln --auto
 ```
+- 2. trimmed gaps with trimAl v1.2 [link](http://trimal.cgenomics.org/getting_started_with_trimal_v1.2)
+```
+trimal -in input.fa -out output.fas -auto
+```
+- 3. Choosing the right substitution model with ModelFinder in IQ-Tree [link](http://www.iqtree.org/doc/Quickstart)
+```
+iqtree -s input.phy {option: model}
+```
 
 ### Molecular Evolution Analysis
 1. Rate of molecular evolution estimation
