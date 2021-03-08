@@ -1,32 +1,20 @@
-#Need to modify lines preceded by ##MODIFY. 
-
-#snakefile to construct hidden markov models, call oggs
-
-#Make list of all genomes. First term is the dictionary key, second is the actual protein file.
-#Trim seq IDS so header only contains protein ID
-##GCF_000980195.1_M.pharaonis_V2.0_protein.faa is Mphar.fa
-#in shell, "cat GCF_000980195.1_M.pharaonis_V2.0_protein.faa | sed 's/\(>[^ ][^ ]*\).*/\1/' > Mphar.fa"
-#sed -i 's/ .*//' Sdum.fa
-#sed -i 's/ .*//' *.fa
-#cat Sdum.fa | sed 's/ .*//' > newFile.fa
-
 
 ##MODIFY
-GENOMES = {"Tasp":"Tasp.pep"} 
+GENOMES = {"{species_name}":"{specie_name}.fa"} 
 
 ##MODIFY
-SPECIES = ["Tasp"]
+SPECIES = ["{species_name}"]
 
 
 ODB_FASTA = "aa_seq_euk.fasta" ##Downloaded from OrthoDB8
 
-THREADS = 39
+THREADS = 40
 
 #Closest related species within the orthoDB database to our studied species.
 #Note that 'SINV' and 'GB' are the orthoDB prefixes for the protein names for each species
 
 ##MODIFY
-REF_PREFIX = {"Tasp":"CUFF"}
+REF_PREFIX = {"{species_anme}":"CUFF"}
 
 ##MODIFY
 REF_SP = ["CUFF"]
@@ -38,7 +26,7 @@ OGGLEVS = ["ara"]
 ODB = {"ara":"ODB8_EukOGs_genes_Arachnida-6854.txt"}
 
 ##MODIFY
-DIR = "/better_scratch/tong/3Spider_Subsociality/2HamstR_OGG/6OGG_Tamopsis_sp/"
+DIR = "{path}"
 
 #Only works for one db currently. This takes the OGG file and makes a list of OGGs
 OGG = [x.split()[1] for x in open("ODB8_EukOGs_genes_Arachnida-6854.txt").readlines()][1:20]
@@ -60,7 +48,7 @@ rule makeProtDB:
 rule createOGGfa:
 	input: dbfa="ref/ara/ara.fa",ann=ODB["ara"]
 	output: fast=expand("{ogg}OGG.fa",ogg=OGG)
-	threads: 39
+	threads: 40
 	shell: """for OGG in $(awk '{{print $2}}' {input[ann]} | uniq | sed '1d' ); \
 		do grep $OGG {input[dbfa]} | sed 's/>//' > $OGG"temp.txt"; \
 		pyfasta extract --header --fasta {input[dbfa]} --file $OGG"temp.txt" > $OGG"OGG.fa"; \
@@ -74,7 +62,7 @@ rule createOGGfa:
 rule BuildHMM:
 	input: "{ogg}OGG.fa"
 	output: "ref/ara/hmm_dir/{ogg}.hmm"
-	threads: 39
+	threads: 40
 	shell: "python2.7 OGGalign.py -s {input} -o {output}"
 
 #Make blast DB of Solenopsis invicta, the reference species for M. pharaonis
