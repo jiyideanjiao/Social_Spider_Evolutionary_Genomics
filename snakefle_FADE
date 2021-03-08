@@ -1,0 +1,11 @@
+OGG, = glob_wildcards("{ogg}.phy")
+THREADS = 1
+
+rule all:
+	input: expand("{ogg}.out",ogg=OGG)
+
+rule FADE:
+	input: "{ogg}.phy"
+        output: "{ogg}.out"
+        threads: 1
+        shell: "hyphy fade --code Universal --branches test --alignment {input} --tree phylogeny.tre > {output}"
