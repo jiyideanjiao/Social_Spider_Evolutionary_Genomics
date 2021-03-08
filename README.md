@@ -23,6 +23,11 @@ sbatch trinity.sh
 - output files: Aexl.fasta (fasta format)
 
 ### Gene Orthology
+- 1 OrthoDB
+```
+snakemake --cores=1 -s snakefile_ogg
+```
+
 
 ### Phylotranscriptomic Analysis
 
