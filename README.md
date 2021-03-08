@@ -73,12 +73,17 @@ java -jar astral.5.7.5.jar -i in.tree -o out.tre
 ```
 
 ### Molecular Evolution Analysis
-1. Rate of molecular evolution estimation
+1. Rate of molecular evolution estimation (dN/dS)
 - 1. codon alignment construction with PAL2NAL [link](http://www.bork.embl.de/pal2nal/)
-input1: amino acid sequence alignment
-input2: DNA sequence
+- input1: amino acid sequence alignment
+- input2: DNA sequence
 ```
 sbatch pal2nal.sh
+```
+- 2. dN/dS estimation with PAML[link](http://abacus.gene.ucl.ac.uk/software/paml.html)
+- branch-model
+```
+sbatch run_paml.sh
 ```
 
 2. Test for selection
