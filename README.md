@@ -75,8 +75,8 @@ java -jar astral.5.7.5.jar -i in.tree -o out.tre
 ### Molecular Evolution Analysis
 1. Rate of molecular evolution estimation (dN/dS)
 - 1. codon alignment construction with PAL2NAL [link](http://www.bork.embl.de/pal2nal/)
---- input1: amino acid sequence alignment
---- input2: DNA sequence
+- input1: amino acid sequence alignment
+- input2: DNA sequence
 ```
 sbatch pal2nal.sh
 ```
@@ -90,7 +90,10 @@ sbatch run_paml.sh
 http://www.datamonkey.org/
 ```
 2. Test for selection
-
+- detecting relaxation / intensification with RELAX [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4327161/)
+```
+snakemake --cores=1 -s snakefile_relax
+```
 
 ### RERconverge Analysis
 
