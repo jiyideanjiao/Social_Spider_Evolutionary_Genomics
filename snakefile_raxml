@@ -1,0 +1,10 @@
+OGG, = glob_wildcards("{ogg}.fas")
+
+rule all:
+        input: expand("RAxML_bestTree.{ogg}.tree",ogg=OGG)
+
+
+rule raxml:
+        input: "{ogg}.fas"
+        output: "RAxML_bestTree.{ogg}.tree"
+        shell: "raxmlHPC-SSE3 -s {input} -m PROTGAMMALGX -f a -p 1234567 -x 1234567 -n {wildcards.ogg}.tree -N 100 -k -T 20"
