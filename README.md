@@ -80,12 +80,15 @@ java -jar astral.5.7.5.jar -i in.tree -o out.tre
 ```
 sbatch pal2nal.sh
 ```
-- 2. dN/dS estimation with PAML[link](http://abacus.gene.ucl.ac.uk/software/paml.html)
+- 2. dN/dS estimation with PAML [link](http://abacus.gene.ucl.ac.uk/software/paml.html)
 - branch-model
 ```
 sbatch run_paml.sh
 ```
-
+- 3. grouped dN/dS estimation (i.e. social vs. nonsocial) with HyPHY [link](http://www.hyphy.org/)
+```
+http://www.datamonkey.org/
+```
 2. Test for selection
 
 
