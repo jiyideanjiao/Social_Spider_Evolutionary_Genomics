@@ -107,7 +107,7 @@ Rscript rerconverge.R
 ```
 
 ### Gene Ontology Enrichment Analysis
-- download and install topGO [link](https://bioconductor.org/packages/release/bioc/html/topGO.html)
+- download and install **topGO** [link](https://bioconductor.org/packages/release/bioc/html/topGO.html)
 - algorithm = "classic"
 - statistic = "fisher"
 - input file1: gene.csv
@@ -118,7 +118,7 @@ Rscript topgo.R
 ```
 
 ### Molecular Convergence Analysis
-- download and install FADE [link](https://www.datamonkey.org/fade)
+- download and install **FADE** [link](https://www.datamonkey.org/fade)
 ```
 snakemake --cores=1 -s snakefile_FADE
 ```
