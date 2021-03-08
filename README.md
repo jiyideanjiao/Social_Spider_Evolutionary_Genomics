@@ -114,8 +114,11 @@ Rscript rerconverge.R
 - input file2: go_annotation.csv
 - output file: gene_classic_fisher_enriched_GO.csv
 ```
-Rscript topGO_run.R
+Rscript topgo.R
 ```
 
 ### Molecular Convergence Analysis
-- 1. 
+- download and install FADE [link](https://www.datamonkey.org/fade)
+```
+snakemake --cores=1 -s snakefile_FADE
+```
