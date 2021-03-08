@@ -59,9 +59,17 @@ clustalo -i input.fa -o output.aln --auto
 ```
 trimal -in input.fa -out output.fas -auto
 ```
-- 3. Choosing the right substitution model with ModelFinder in IQ-Tree [link](http://www.iqtree.org/doc/Quickstart)
+- 3. choosing the right substitution model with ModelFinder in IQ-Tree [link](http://www.iqtree.org/doc/Quickstart)
 ```
 iqtree -s input.phy {option: model}
+```
+- 4. tree construction with RAxML [link](https://cme.h-its.org/exelixis/resource/download/NewManual.pdf)
+```
+snakemake --cores=1 -s snakefile_raxml
+```
+- 5. species tree inferrence with ASTRAL [link](https://github.com/smirarab/ASTRAL)
+```
+java -jar astral.5.7.5.jar -i in.tree -o out.tre
 ```
 
 ### Molecular Evolution Analysis
