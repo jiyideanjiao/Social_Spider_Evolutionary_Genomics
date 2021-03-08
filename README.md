@@ -7,7 +7,7 @@
 - We perform this comparative genomics study to determine if there is consistent genomic signatures of protein-coding sequence evolution associated with the convergent evolution of sociality in spiders.
 
 
-### Transcriptome Assembly
+### Assembly and annotation
 
 - introduction to **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 - install **Trinity** via **conda**
@@ -15,12 +15,22 @@
 ```
 conda install -c bioconda trinity
 ```
-- start *de novo* assembly
+- 1. *de novo* assembly with Trinity
 
 ```
 sbatch trinity.sh
 ```
 - output files: Aexl.fasta (fasta format)
+
+- 2.remove redundance with CD-HIT [link](http://weizhongli-lab.org/cd-hit/)
+```
+cd-hit -i {species_name}.fa -o {species_name}_0.9.fa -c 0.9 -n 5 -M 16000 –d 0 -T 8
+```
+- 3. protein-coding region prediction with TransDecoder [link](https://github.com/TransDecoder/TransDecoder/wiki)
+```
+TransDecoder.LongOrfs -t {species_name}.fa
+TransDecoder.Predict -t {species_name}.fa
+```
 
 ### Gene Orthology
 - 1. OrthoDB [link](https://www.orthodb.org/v8/index.html)
