@@ -39,7 +39,7 @@ corsocial=correlateWithBinaryPhenotype(spiderRER, phenvsocial, min.sp=3, min.pos
 
 
 #creating a gene2GO list from the list of 7590 shared orthologs, where there is a gene name and list of GO terms
-gene.BPGO.list=read.csv("/scratch/tong/task24_spider_reanalysis/5Shared_ortholog/7all_spider_25_outgroup/10RERconverge/spider_go_annotation.csv")
+gene.BPGO.list=read.csv("go_annotation.csv")
 gene.BPGO=strsplit(gene.BPGO.list$go_id,",")
 names(gene.BPGO)=gene.BPGO.list$OGG_ID
 GO2geneID=inverseList(gene.BPGO)
