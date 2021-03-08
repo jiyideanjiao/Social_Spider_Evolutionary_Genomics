@@ -32,6 +32,11 @@ TransDecoder.LongOrfs -t {species_name}.fa
 TransDecoder.Predict -t {species_name}.fa
 ```
 
+- 4. Transcriptome assessment with BUSCO [link] (https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
+```
+python scripts/run_BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
+```
+
 ### Gene Orthology
 - 1. OrthoDB [link](https://www.orthodb.org/v8/index.html)
 ```
