@@ -106,4 +106,16 @@ Rscript estimate_tree.R
 Rscript rerconverge.R
 ```
 
+### Gene Ontology Enrichment Analysis
+- download and install topGO [link](https://bioconductor.org/packages/release/bioc/html/topGO.html)
+- algorithm = "classic"
+- statistic = "fisher"
+- input file1: gene.csv
+- input file2: go_annotation.csv
+- output file: gene_classic_fisher_enriched_GO.csv
+```
+Rscript topGO_run.R
+```
+
 ### Molecular Convergence Analysis
+- 1. 
