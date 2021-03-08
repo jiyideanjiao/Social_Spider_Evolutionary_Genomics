@@ -51,6 +51,11 @@ orthofinder -b {path}/folder
 
 ### Phylotranscriptomic Analysis
 
+- 1. protein alignment with clustalo [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
+```
+clustalo -i input.fa -o output.aln --auto
+```
+
 ### Molecular Evolution Analysis
 1. Rate of molecular evolution estimation
 
