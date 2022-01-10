@@ -1,4 +1,4 @@
-### Genomic signatures of recent convergent transitions to social life in spiders
+#### Genomic signatures of recent convergent transitions to social life in spiders
 
 - Authors: Chao Tong
 - Date: March-7-2021
@@ -7,7 +7,7 @@
 - We perform this comparative genomics study to determine if there is consistent genomic signatures of protein-coding sequence evolution associated with the convergent evolution of sociality in spiders.
 
 
-### Assembly and Annotation
+#### Assembly and Annotation
 
 - introduction to **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 - install **Trinity** via **conda**
@@ -37,7 +37,7 @@ TransDecoder.Predict -t {species_name}.fa
 python scripts/run_BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
 ```
 
-### Gene Orthology
+#### Gene Orthology
 - 1. **OrthoDB** [link](https://www.orthodb.org/v8/index.html)
 ```
 snakemake --cores=1 -s snakefile_ogg
@@ -49,7 +49,7 @@ orthofinder -f {path}/folder
 orthofinder -b {path}/folder
 ```
 
-### Phylotranscriptomic Analysis
+#### Phylotranscriptomic Analysis
 
 - 1. protein alignment with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
 ```
@@ -72,7 +72,7 @@ snakemake --cores=1 -s snakefile_raxml
 java -jar astral.5.7.5.jar -i in.tree -o out.tre
 ```
 
-### Molecular Evolution Analysis
+#### Molecular Evolution Analysis
 1. Rate of molecular evolution estimation (dN/dS)
 - 1. codon alignment construction with **PAL2NAL** [link](http://www.bork.embl.de/pal2nal/)
 - input1: amino acid sequence alignment
@@ -95,7 +95,7 @@ http://www.datamonkey.org/
 snakemake --cores=1 -s snakefile_relax
 ```
 
-### RERconverge Analysis
+#### RERconverge Analysis
 - download and install **RERconverge** [link](https://github.com/nclark-lab/RERconverge)
 - 1. branch length estimation for each gene with **phangorn** [link](https://cran.r-project.org/web/packages/phangorn/index.html)
 ```
@@ -106,7 +106,7 @@ Rscript estimate_tree.R
 Rscript rerconverge.R
 ```
 
-### Gene Ontology Enrichment Analysis
+#### Gene Ontology Enrichment Analysis
 - download and install **topGO** [link](https://bioconductor.org/packages/release/bioc/html/topGO.html)
 - algorithm = "classic"
 - statistic = "fisher"
@@ -117,7 +117,7 @@ Rscript rerconverge.R
 Rscript topgo.R
 ```
 
-### Molecular Convergence Analysis
+#### Molecular Convergence Analysis
 - download and install **FADE** [link](https://www.datamonkey.org/fade)
 ```
 snakemake --cores=1 -s snakefile_FADE
