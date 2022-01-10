@@ -9,31 +9,31 @@
 ```
 trimmomatic PE *R1_001.fastq.gz *R2_001.fastq.gz -baseout trimmed.fastq LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:35
 ```
-*de novo* assembly with **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
+##### *de novo* assembly with **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 ```
 conda install -c bioconda trinity
 sbatch trinity.sh
 ```
-*de novo* assembly with **rnaSPAdes** [link](https://cab.spbu.ru/software/rnaspades/)
+##### *de novo* assembly with **rnaSPAdes** [link](https://cab.spbu.ru/software/rnaspades/)
 ```
 conda install -c bioconda spades
 sbatch rnaSPAdes.sh
 ```
-Remove redundance with **CD-HIT** [link](http://weizhongli-lab.org/cd-hit/)
+##### Remove redundance with **CD-HIT** [link](http://weizhongli-lab.org/cd-hit/)
 ```
 cd-hit -i {species_name}_assembly.fa -o {species_name}_0.9_assembly.fa -c 0.9 -n 5 -M 16000 –d 0 -T 8
 ```
-- Gene model prediction with **TransDecoder** [link](https://github.com/TransDecoder/TransDecoder/wiki)
+##### Gene model prediction with **TransDecoder** [link](https://github.com/TransDecoder/TransDecoder/wiki)
 ```
 conda install -c bioconda transdecoder
 sbatch gene_model_transdecoder.sh
 ```
-- Gene model prediction with **Augustus** [link](https://bioinf.uni-greifswald.de/augustus/)
+##### Gene model prediction with **Augustus** [link](https://bioinf.uni-greifswald.de/augustus/)
 ```
 conda install -c bioconda augustus
 sbatch gene_model_augustus.sh
 ```
-- Gene model prediction with **MAKER** [link](https://www.yandell-lab.org/software/maker.html)
+##### Gene model prediction with **MAKER** [link](https://www.yandell-lab.org/software/maker.html)
 ```
 conda install -c bioconda maker
 sbatch gene_model_maker.sh
@@ -41,12 +41,12 @@ sbatch gene_model_maker.sh
 #### Assembly :: Genome :: Improvement
 
 
-- Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
+##### Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
 ```
 python scripts/run_BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
 ```
 #### Gene Orthology
-- **OrthoDB** [link](https://www.orthodb.org/v8/index.html)
+##### **OrthoDB** [link](https://www.orthodb.org/v8/index.html)
 ```
 snakemake --cores=1 -s snakefile_ogg
 ```
