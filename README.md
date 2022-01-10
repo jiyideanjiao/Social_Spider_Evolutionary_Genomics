@@ -56,6 +56,7 @@ sh P_RNA_scaffolder.sh -d dir -i input.sam -j spider.fa -F R1.fastq -R R2.fastq
 ##### Improve genome with **PEP_scaffolder** [link](https://github.com/CAFS-bioinformatics/PEP_scaffolder)
 ```
 conda install -c bioconda pblat
+sbatch pblat.sh
 sh PEP_scaffolder.sh -d ./ -i map.psl -j spider.fasta
 ```
 
