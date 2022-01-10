@@ -38,7 +38,7 @@ sbatch gene_model_augustus.sh
 conda install -c bioconda maker
 sbatch gene_model_maker.sh
 ```
-#### Assembly :: Genome
+#### Assembly :: Genome :: Improvement
 
 
 - 8. Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
