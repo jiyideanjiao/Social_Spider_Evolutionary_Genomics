@@ -66,7 +66,7 @@ sh PEP_scaffolder.sh -d ./ -i map.psl -j spider.fasta
 sbatch run_busco.sh
 ```
 ### Gene Orthology
-##### **OrthoDB** [link](https://www.orthodb.org/v8/index.html)
+- **OrthoDB** [link](https://www.orthodb.org/v8/index.html)
 ```
 snakemake --cores=1 -s snakefile_ogg
 ```
@@ -76,6 +76,8 @@ orthofinder -f {path}/folder
 orthofinder -b {path}/folder
 ```
 ### Phylotranscriptomic Analysis
+##### Single-copy orthologs
+
 
 - protein alignment with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
 ```
