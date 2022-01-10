@@ -4,7 +4,8 @@
 - Project description:
 - We perform this comparative genomics study to determine if there is consistent genomic signatures of protein-coding sequence evolution associated with the convergent evolution of sociality in spiders.
 
-#### Assembly and Annotation
+#### Assembly
+#### Transcriptome
 - 1. Illumina read quality control
 ```
 trimmomatic PE *R1_001.fastq.gz *R2_001.fastq.gz -baseout trimmed.fastq LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:35
