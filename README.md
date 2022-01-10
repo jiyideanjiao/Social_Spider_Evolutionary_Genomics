@@ -9,7 +9,7 @@
 ```
 trimmomatic PE *R1_001.fastq.gz *R2_001.fastq.gz -baseout trimmed.fastq LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:35
 ```
-- 2-1. *de novo* assembly with **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
+- 2.1. *de novo* assembly with **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 ```
 conda install -c bioconda trinity
 sbatch trinity.sh
