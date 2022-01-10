@@ -132,11 +132,11 @@ snakemake --cores=1 -s snakefile_relax
 ```
 ### RERconverge analysis
 - download and install **RERconverge** [link](https://github.com/nclark-lab/RERconverge)
-##### branch length estimation for each gene with **phangorn** [link](https://cran.r-project.org/web/packages/phangorn/index.html)
+##### Branch length estimation for each gene with **phangorn** [link](https://cran.r-project.org/web/packages/phangorn/index.html)
 ```
 Rscript estimate_tree.R
 ```
-##### run binary trait analysis
+##### Run binary trait analysis
 ```
 Rscript rerconverge.R
 ```
