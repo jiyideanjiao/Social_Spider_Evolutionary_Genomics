@@ -38,7 +38,7 @@ conda install -c bioconda maker
 sbatch gene_model_maker.sh
 ```
 ### Assembly :: Genome :: Improvement
-##### *de novo* assembly with **SPAdes** [link](https://github.com/ablab/spades)
+##### genome re-assembly with **SPAdes** [link](https://github.com/ablab/spades)
 ```
 sbatch wgs_SPAdes.sh
 ```
@@ -60,11 +60,7 @@ sbatch pblat.sh
 sh PEP_scaffolder.sh -d ./ -i map.psl -j spider.fasta
 ```
 
-
-
-
-
-
+### Genome content completeness assessment
 ##### Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
 ```
 python scripts/run_BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
