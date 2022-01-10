@@ -11,7 +11,7 @@
 conda install -c bioconda trinity
 sbatch trinity.sh
 ```
--- output files: {species_name}.fasta (fasta format)
+- output files: {species_name}.fasta (fasta format)
 - 2. remove redundance with **CD-HIT** [link](http://weizhongli-lab.org/cd-hit/)
 ```
 cd-hit -i {species_name}.fa -o {species_name}_0.9.fa -c 0.9 -n 5 -M 16000 –d 0 -T 8
