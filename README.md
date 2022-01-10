@@ -9,13 +9,19 @@
 ```
 trimmomatic PE *R1_001.fastq.gz *R2_001.fastq.gz -baseout trimmed.fastq LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:35
 ```
-- 2. *de novo* assembly with **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
+- 2-1. *de novo* assembly with **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 ```
 conda install -c bioconda trinity
 sbatch trinity.sh
 ```
 - input files: {species_name}_R1.fastq, {species_name}_R2.fastq
 - output files: {species_name}.fasta
+- 2-2. *de novo* assembly with **rnaSPAdes** [link](https://cab.spbu.ru/software/rnaspades/)
+```
+conda install -c bioconda spades
+sbatch rnaSPAdes.sh
+```
+
 - 2. remove redundance with **CD-HIT** [link](http://weizhongli-lab.org/cd-hit/)
 ```
 cd-hit -i {species_name}.fa -o {species_name}_0.9.fa -c 0.9 -n 5 -M 16000 –d 0 -T 8
