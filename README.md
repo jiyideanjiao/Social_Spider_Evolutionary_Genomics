@@ -9,9 +9,7 @@
 
 #### Assembly and Annotation
 
-- introduction to **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
-- install **Trinity** via **conda**
-
+- install **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 ```
 conda install -c bioconda trinity
 ```
