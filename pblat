@@ -1,0 +1,6 @@
+#!/bin/bash -ve
+#SBATCH -p compute # partition (queue)
+#SBATCH --export=ALL
+#SBATCH --cpus-per-task=15
+
+pblat -threads=15 -t=dnax -q=prot spider.fasta ./spider_ref_proteins.fasta map.psl -noHead
