@@ -34,9 +34,10 @@ conda install -c bioconda augustus
 sbatch gene_model_augustus.sh
 ```
 - 4-3. protein-coding gene prediction with **MAKER** [link](https://www.yandell-lab.org/software/maker.html)
-
-
-
+```
+conda install -c bioconda maker
+sbatch gene_model_maker.sh
+```
 - 5. Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
 ```
 python scripts/run_BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
