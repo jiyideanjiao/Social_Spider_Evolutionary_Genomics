@@ -140,6 +140,11 @@ Rscript estimate_tree.R
 ```
 Rscript rerconverge.R
 ```
+### Molecular convergence analysis
+- download and install **FADE** [link](https://www.datamonkey.org/fade)
+```
+snakemake --cores=1 -s snakefile_FADE
+```
 ### Gene ontology enrichment analysis
 - download and install **topGO** [link](https://bioconductor.org/packages/release/bioc/html/topGO.html)
 - algorithm = "classic"
@@ -150,8 +155,4 @@ Rscript rerconverge.R
 ```
 Rscript topgo.R
 ```
-### Molecular convergence analysis
-- download and install **FADE** [link](https://www.datamonkey.org/fade)
-```
-snakemake --cores=1 -s snakefile_FADE
-```
+
