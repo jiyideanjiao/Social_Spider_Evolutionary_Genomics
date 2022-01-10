@@ -1,7 +1,7 @@
 #### Genomic signatures of recent convergent transitions to social life in spiders
 
 - Authors: Chao Tong
-- Date: March-7-2021
+- Date: January-7-2022
 
 - Project description:
 - We perform this comparative genomics study to determine if there is consistent genomic signatures of protein-coding sequence evolution associated with the convergent evolution of sociality in spiders.
