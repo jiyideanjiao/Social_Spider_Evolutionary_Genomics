@@ -61,7 +61,7 @@ sh PEP_scaffolder.sh -d ./ -i map.psl -j spider.fasta
 ```
 
 ### Genome content completeness assessment
-##### Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
+##### Transcriptome assembly / Genome reassembly completeness assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
 ```
 python scripts/run_BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
 ```
