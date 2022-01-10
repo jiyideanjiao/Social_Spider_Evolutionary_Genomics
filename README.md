@@ -106,7 +106,7 @@ java -jar astral.5.7.5.jar -i in.tree -o out.tre
 ```
 sbatch run_mcmctree.sh
 ```
-### Evolutionary genomics analysis
+### Evolutionary genomic analysis
 ### Molecular Evolution Analysis
 ##### Estimate the rate of molecular evolution (dN/dS)
 - codon alignment construction with **PAL2NAL** [link](http://www.bork.embl.de/pal2nal/)
