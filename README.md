@@ -101,16 +101,18 @@ snakemake --cores=1 -s snakefile_raxml
 java -jar astral.5.7.5.jar -i in.tree -o out.tre
 ```
 ### Divergence time estimation
+##### Get calibration time point from relevant literatures or **Timmtree** [link](http://www.timetree.org/)
 ##### Estimate divergence time with mcmctree model in **PAML** [link](http://web.mit.edu/6.891/www/lab/paml.html)
 ```
 sbatch run_mcmctree.sh
 ```
-
+### Evolutionary genomics analysis
 ### Molecular Evolution Analysis
 ##### Estimate the rate of molecular evolution (dN/dS)
 - codon alignment construction with **PAL2NAL** [link](http://www.bork.embl.de/pal2nal/)
 - input1: amino acid sequence alignment
 - input2: DNA sequence
+- output: Codon sequence
 ```
 sbatch pal2nal.sh
 ```
