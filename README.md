@@ -19,21 +19,21 @@ sbatch trinity.sh
 conda install -c bioconda spades
 sbatch rnaSPAdes.sh
 ```
-- 3. remove redundance with **CD-HIT** [link](http://weizhongli-lab.org/cd-hit/)
+- 3. Remove redundance with **CD-HIT** [link](http://weizhongli-lab.org/cd-hit/)
 ```
 cd-hit -i {species_name}_assembly.fa -o {species_name}_0.9_assembly.fa -c 0.9 -n 5 -M 16000 –d 0 -T 8
 ```
-- 4-1. gene model prediction with **TransDecoder** [link](https://github.com/TransDecoder/TransDecoder/wiki)
+- 4-1. Gene model prediction with **TransDecoder** [link](https://github.com/TransDecoder/TransDecoder/wiki)
 ```
 conda install -c bioconda transdecoder
 sbatch gene_model_transdecoder.sh
 ```
-- 4-2. gene model prediction with **Augustus** [link](https://bioinf.uni-greifswald.de/augustus/)
+- 4-2. Gene model prediction with **Augustus** [link](https://bioinf.uni-greifswald.de/augustus/)
 ```
 conda install -c bioconda augustus
 sbatch gene_model_augustus.sh
 ```
-- 4-3. gene model prediction with **MAKER** [link](https://www.yandell-lab.org/software/maker.html)
+- 4-3. Gene model prediction with **MAKER** [link](https://www.yandell-lab.org/software/maker.html)
 ```
 conda install -c bioconda maker
 sbatch gene_model_maker.sh
