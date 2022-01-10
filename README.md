@@ -65,7 +65,7 @@ sh PEP_scaffolder.sh -d ./ -i map.psl -j spider.fasta
 ```
 sbatch run_busco.sh
 ```
-### Gene Orthology
+### Gene orthology
 ##### **OrthoDB** [link](https://www.orthodb.org/v8/index.html)
 ```
 snakemake --cores=1 -s snakefile_ogg
@@ -75,7 +75,7 @@ snakemake --cores=1 -s snakefile_ogg
 orthofinder -f {path}/folder
 orthofinder -b {path}/folder
 ```
-### Phylotranscriptomic Analysis
+### Phylotranscriptomic analysis
 ##### Identify single-copy ortholog with **BUSCO** (hmmsearch)
 ```
 cp ~/busco/run_arachnida_odb10/busco_sequences/single_copy_busco_sequences/*.faa ./all_orthologs
@@ -107,7 +107,7 @@ java -jar astral.5.7.5.jar -i in.tree -o out.tre
 sbatch run_mcmctree.sh
 ```
 ### Evolutionary genomic analysis
-### Molecular Evolution Analysis
+### Molecular evolution analysis
 ##### Estimate the rate of molecular evolution (dN/dS)
 - codon alignment construction with **PAL2NAL** [link](http://www.bork.embl.de/pal2nal/)
 - input1: amino acid sequence alignment
@@ -130,7 +130,7 @@ http://www.datamonkey.org/
 ```
 snakemake --cores=1 -s snakefile_relax
 ```
-### RERconverge Analysis
+### RERconverge analysis
 - download and install **RERconverge** [link](https://github.com/nclark-lab/RERconverge)
 ##### branch length estimation for each gene with **phangorn** [link](https://cran.r-project.org/web/packages/phangorn/index.html)
 ```
@@ -140,7 +140,7 @@ Rscript estimate_tree.R
 ```
 Rscript rerconverge.R
 ```
-### Gene Ontology Enrichment Analysis
+### Gene ontology enrichment analysis
 - download and install **topGO** [link](https://bioconductor.org/packages/release/bioc/html/topGO.html)
 - algorithm = "classic"
 - statistic = "fisher"
@@ -150,7 +150,7 @@ Rscript rerconverge.R
 ```
 Rscript topgo.R
 ```
-### Molecular Convergence Analysis
+### Molecular convergence analysis
 - download and install **FADE** [link](https://www.datamonkey.org/fade)
 ```
 snakemake --cores=1 -s snakefile_FADE
