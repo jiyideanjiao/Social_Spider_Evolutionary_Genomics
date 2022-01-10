@@ -8,13 +8,10 @@
 
 #### Assembly and Annotation
 
-- install **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
-```
-conda install -c bioconda trinity
-```
-- 1. *de novo* assembly with Trinity
+- 1. *de novo* assembly with **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 
 ```
+conda install -c bioconda trinity
 sbatch trinity.sh
 ```
 - output files: {species_name}.fasta (fasta format)
