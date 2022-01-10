@@ -21,13 +21,19 @@ sbatch rnaSPAdes.sh
 ```
 - 3. remove redundance with **CD-HIT** [link](http://weizhongli-lab.org/cd-hit/)
 ```
-cd-hit -i {species_name}.fa -o {species_name}_0.9.fa -c 0.9 -n 5 -M 16000 –d 0 -T 8
+cd-hit -i {species_name}_assembly.fa -o {species_name}_0.9_assembly.fa -c 0.9 -n 5 -M 16000 –d 0 -T 8
 ```
-- 4. protein-coding region prediction with **TransDecoder** [link](https://github.com/TransDecoder/TransDecoder/wiki)
+- 4-1. protein-coding gene prediction with **TransDecoder** [link](https://github.com/TransDecoder/TransDecoder/wiki)
 ```
 TransDecoder.LongOrfs -t {species_name}.fa
 TransDecoder.Predict -t {species_name}.fa
 ```
+- 4-2. protein-coding gene prediction with **Augustus** [link](https://bioinf.uni-greifswald.de/augustus/)
+```
+conda install -c bioconda augustus
+sbatch gene_model_augustus.sh
+```
+
 - 5. Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
 ```
 python scripts/run_BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
