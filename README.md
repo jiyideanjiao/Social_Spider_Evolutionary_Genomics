@@ -76,30 +76,36 @@ orthofinder -f {path}/folder
 orthofinder -b {path}/folder
 ```
 ### Phylotranscriptomic Analysis
-##### Single-copy orthologs identification with BUSCO (hmmsearch)
+##### Identify single-copy ortholog with BUSCO (hmmsearch)
 ```
 cp ~/busco/run_hymenoptera_odb10/busco_sequences/single_copy_busco_sequences/*.faa ./all_orthologs
 ```
-##### Protein alignment with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
+##### Align orthologs (ogg) with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
 ```
-clustalo -i input.fa -o output.aln --auto
+clustalo -i {ogg_id}.fa -o {ogg_id}.aln --auto
 ```
-- trimmed gaps with **trimAl** [link](http://trimal.cgenomics.org/getting_started_with_trimal_v1.2)
+##### Trim gaps with **trimAl** [link](http://trimal.cgenomics.org/getting_started_with_trimal_v1.2)
 ```
-trimal -in input.fa -out output.fas -auto
+trimal -in {ogg_id}.aln -out output.trimal.aln -auto
 ```
-- Choosing the right substitution model with **ModelFinder** in **IQ-Tree** [link](http://www.iqtree.org/doc/Quickstart)
+##### Choosing the appropriate substitution model with **ModelFinder** in **IQ-Tree** [link](http://www.iqtree.org/doc/Quickstart)
 ```
 iqtree -s input.phy {option: model}
 ```
-- Tree construction with **RAxML** [link](https://cme.h-its.org/exelixis/resource/download/NewManual.pdf)
+##### Tree construction with **RAxML** [link](https://cme.h-its.org/exelixis/resource/download/NewManual.pdf)
 ```
 snakemake --cores=1 -s snakefile_raxml
 ```
-- Species tree inferrence with **ASTRAL** [link](https://github.com/smirarab/ASTRAL)
+##### Species tree inferrence with **ASTRAL** [link](https://github.com/smirarab/ASTRAL)
 ```
 java -jar astral.5.7.5.jar -i in.tree -o out.tre
 ```
+### Divergence time estimation
+##### estimate divergence time with mcmctree model in **PAML** [link](http://web.mit.edu/6.891/www/lab/paml.html)
+```
+sbatch run_mcmctree.sh
+```
+
 ### Molecular Evolution Analysis
 Rate of molecular evolution estimation (dN/dS)
 - codon alignment construction with **PAL2NAL** [link](http://www.bork.embl.de/pal2nal/)
