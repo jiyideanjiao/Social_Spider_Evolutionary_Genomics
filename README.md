@@ -76,11 +76,11 @@ orthofinder -f {path}/folder
 orthofinder -b {path}/folder
 ```
 ### Phylotranscriptomic Analysis
-##### Identify single-copy ortholog with BUSCO (hmmsearch)
+##### Identify single-copy ortholog with **BUSCO** (hmmsearch)
 ```
-cp ~/busco/run_hymenoptera_odb10/busco_sequences/single_copy_busco_sequences/*.faa ./all_orthologs
+cp ~/busco/run_arachnida_odb10/busco_sequences/single_copy_busco_sequences/*.faa ./all_orthologs
 ```
-##### Align orthologs (ogg) with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
+##### Align orthologs with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
 ```
 clustalo -i {ogg_id}.fa -o {ogg_id}.aln --auto
 ```
@@ -92,7 +92,7 @@ trimal -in {ogg_id}.aln -out output.trimal.aln -auto
 ```
 iqtree -s input.phy {option: model}
 ```
-##### Tree construction with **RAxML** [link](https://cme.h-its.org/exelixis/resource/download/NewManual.pdf)
+##### Reconstruct phylogenetic tree with **RAxML** [link](https://cme.h-its.org/exelixis/resource/download/NewManual.pdf)
 ```
 snakemake --cores=1 -s snakefile_raxml
 ```
