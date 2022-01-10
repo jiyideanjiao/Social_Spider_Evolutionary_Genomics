@@ -66,20 +66,21 @@ sh PEP_scaffolder.sh -d ./ -i map.psl -j spider.fasta
 sbatch run_busco.sh
 ```
 ### Gene Orthology
-- **OrthoDB** [link](https://www.orthodb.org/v8/index.html)
+##### **OrthoDB** [link](https://www.orthodb.org/v8/index.html)
 ```
 snakemake --cores=1 -s snakefile_ogg
 ```
-- **OrthoFinder** [link](https://github.com/davidemms/OrthoFinder)
+##### **OrthoFinder** [link](https://github.com/davidemms/OrthoFinder)
 ```
 orthofinder -f {path}/folder
 orthofinder -b {path}/folder
 ```
 ### Phylotranscriptomic Analysis
-##### Single-copy orthologs
-
-
-- protein alignment with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
+##### Single-copy orthologs identification with BUSCO (hmmsearch)
+```
+cp ~/busco/run_hymenoptera_odb10/busco_sequences/single_copy_busco_sequences/*.faa ./all_orthologs
+```
+##### Protein alignment with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
 ```
 clustalo -i input.fa -o output.aln --auto
 ```
