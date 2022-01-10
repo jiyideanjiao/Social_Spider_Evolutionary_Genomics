@@ -38,6 +38,7 @@ conda install -c bioconda maker
 sbatch gene_model_maker.sh
 ```
 #### Assembly :: Genome :: Improvement
+##### *de novo* assembly with **SPAdes** [link](https://github.com/ablab/spades)
 
 
 ##### Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
