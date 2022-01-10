@@ -33,6 +33,9 @@ sbatch gene_model_transdecoder.sh
 conda install -c bioconda augustus
 sbatch gene_model_augustus.sh
 ```
+- 4-3. protein-coding gene prediction with **MAKER** [link](https://www.yandell-lab.org/software/maker.html)
+
+
 
 - 5. Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
 ```
