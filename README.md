@@ -121,7 +121,7 @@ sbatch pal2nal.sh
 ```
 sbatch run_paml.sh
 ```
-- Grouped dN/dS estimation (i.e. social vs. nonsocial) with **HyPHY** [link](http://www.hyphy.org/)
+##### Grouped dN/dS estimation (i.e. social vs. nonsocial) with **HyPHY** [link](http://www.hyphy.org/)
 ```
 http://www.datamonkey.org/
 ```
