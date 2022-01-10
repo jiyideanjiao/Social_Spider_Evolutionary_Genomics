@@ -123,18 +123,18 @@ sbatch run_paml.sh
 ```
 http://www.datamonkey.org/
 ```
-- Test for selection
+##### Test for selection
 - detecting relaxation / intensification with **RELAX** [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4327161/)
 ```
 snakemake --cores=1 -s snakefile_relax
 ```
 ### RERconverge Analysis
 - download and install **RERconverge** [link](https://github.com/nclark-lab/RERconverge)
-- 1. branch length estimation for each gene with **phangorn** [link](https://cran.r-project.org/web/packages/phangorn/index.html)
+##### branch length estimation for each gene with **phangorn** [link](https://cran.r-project.org/web/packages/phangorn/index.html)
 ```
 Rscript estimate_tree.R
 ```
-- 2. run binary trait analysis
+##### run binary trait analysis
 ```
 Rscript rerconverge.R
 ```
