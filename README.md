@@ -25,8 +25,8 @@ cd-hit -i {species_name}_assembly.fa -o {species_name}_0.9_assembly.fa -c 0.9 -n
 ```
 - 4-1. protein-coding gene prediction with **TransDecoder** [link](https://github.com/TransDecoder/TransDecoder/wiki)
 ```
-TransDecoder.LongOrfs -t {species_name}.fa
-TransDecoder.Predict -t {species_name}.fa
+conda install -c bioconda transdecoder
+sbatch gene_model_transdecoder.sh
 ```
 - 4-2. protein-coding gene prediction with **Augustus** [link](https://bioinf.uni-greifswald.de/augustus/)
 ```
