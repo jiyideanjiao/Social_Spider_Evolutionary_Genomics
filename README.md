@@ -40,13 +40,29 @@ sbatch gene_model_maker.sh
 #### Assembly :: Genome :: Improvement
 ##### *de novo* assembly with **SPAdes** [link](https://github.com/ablab/spades)
 ```
-wgs_SPAdes.sh
+sbatch wgs_SPAdes.sh
 ```
 ##### Remove redundance with **Redundans** [link](https://github.com/lpryszcz/redundans)
 ```
 conda install -c genomedk redundans
 sbatch redundans.sh
 ```
+##### Improve genome with **P_RNA_scaffolder** [link](https://github.com/CAFS-bioinformatics/P_RNA_scaffolder)
+```
+conda install -c bioconda hisat2
+sbatch mapping_RNAseq_reads.sh
+sh P_RNA_scaffolder.sh -d dir -i input.sam -j spider.fa -F R1.fastq -R R2.fastq
+```
+
+
+
+
+
+
+
+
+
+
 ##### Transcriptome assessment with **BUSCO** [link](https://vcru.wisc.edu/simonlab/bioinformatics/programs/busco/BUSCO_v3_userguide.pdf)
 ```
 python scripts/run_BUSCO.py -i SEQUENCE_FILE -o OUTPUT_NAME -l LINEAGE -m tran
