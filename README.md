@@ -5,13 +5,17 @@
 - We perform this comparative genomics study to determine if there is consistent genomic signatures of protein-coding sequence evolution associated with the convergent evolution of sociality in spiders.
 
 #### Assembly and Annotation
-
-- 1. *de novo* assembly with **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
+- 1. Illumina read quality control
+```
+trimmomatic PE *R1_001.fastq.gz *R2_001.fastq.gz -baseout trimmed.fastq LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:35
+```
+- 2. *de novo* assembly with **Trinity** [link](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 ```
 conda install -c bioconda trinity
 sbatch trinity.sh
 ```
-- output files: {species_name}.fasta (fasta format)
+- input files: {species_name}_R1.fastq, {species_name}_R2.fastq
+- output files: {species_name}.fasta
 - 2. remove redundance with **CD-HIT** [link](http://weizhongli-lab.org/cd-hit/)
 ```
 cd-hit -i {species_name}.fa -o {species_name}_0.9.fa -c 0.9 -n 5 -M 16000 –d 0 -T 8
