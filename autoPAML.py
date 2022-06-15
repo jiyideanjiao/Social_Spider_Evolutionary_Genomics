@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
+
 #usage  python autoPAML.py alignment.fasta tree.nexus paml.output
+
 
 from __future__ import division
 from Bio.Phylo.PAML import codeml
