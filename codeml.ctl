@@ -1,5 +1,5 @@
-seqfile = {}.phy
-outfile = {}.out
+seqfile = {gene}.phy
+outfile = {gene}.out
 treefile = phylogeny.tre
 verbose = 1
 CodonFreq = 2
