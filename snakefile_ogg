@@ -1,3 +1,7 @@
+###
+OrthoDB
+###
+
 
 ##MODIFY
 GENOMES = {"{species_name}":"{specie_name}.fa"} 
