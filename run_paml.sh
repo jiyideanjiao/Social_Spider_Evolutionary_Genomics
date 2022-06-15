@@ -2,7 +2,7 @@
 
 #SBATCH -p compute # partition (queue)
 #SBATCH --export=ALL
-#SBATCH --cpus-per-task=2
+#SBATCH -n {number}
 
 for i in `ls *.phy`
 do
