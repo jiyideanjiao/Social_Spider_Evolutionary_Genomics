@@ -1,13 +1,13 @@
 library(topGO)
-setwd("path/")
+setwd("path to file")
 
 gene.BPGO.list=read.csv("{go_annotation.csv}")
 gene.BPGO=strsplit(gene.BPGO.list$go_id,",")
 names(gene.BPGO)=gene.BPGO.list$OGG_ID
 
 geneNames=names(gene.BPGO)
-gene.list.gT=read.csv("{gene.csv}")
-sig.list.gT=subset(gene.list.gT)$OGG_ID
+gene.list=read.csv("{gene.csv}")
+sig.list=subset(gene.list.gT)$OGG_ID
 
 GOfunc <- function(myInterestingGenes){
   geneList <- factor(as.integer(geneNames %in% myInterestingGenes))
@@ -20,7 +20,7 @@ GOfunc <- function(myInterestingGenes){
   return(sig.tab)
 }
 
-GOfunc(sig.list.gT)
+GOfunc(sig.list)
 
-gene_result=GOfunc(sig.list.gT)
+gene_result=GOfunc(sig.list)
 write.csv(gene_result, file = "{output_enriched_GO.csv}")
