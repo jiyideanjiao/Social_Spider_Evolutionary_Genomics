@@ -1,4 +1,4 @@
-#!/usr/local/bin/python2.7
+#!/usr/local/bin/python
 #File takes in a fasta file containing protein sequences from many species
 #The protein sequences are labeled by their unique OrthoDB8 key. 
 #The purpose is to replace the key with >Ortholog|species|gene name
