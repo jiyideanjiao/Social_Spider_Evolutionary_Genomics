@@ -1,4 +1,4 @@
-#!/usr/local/bin/python2.7
+#!/usr/local/bin/python
 ##File takes in the name of an OGG from OrthoDB7
 ##Finds all sequences for all ant species, uses MAFFT, PRANK, and HMMER to make markov models of OGGs
 
