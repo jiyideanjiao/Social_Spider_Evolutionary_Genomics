@@ -1,3 +1,7 @@
+###
+species tree
+###
+
 OGG, = glob_wildcards("{ogg}.fas")
 
 rule all:
