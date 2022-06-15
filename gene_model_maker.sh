@@ -4,4 +4,4 @@
 #SBATCH --export=ALL
 #SBATCH -n {n}
 
-maker
+sh maker_pipeline.sh
