@@ -2,6 +2,7 @@ require(phangorn)
 require(tools)
 setwd("")
 
+#create function for pruning alignment from species tree
 pruneAlnFromTree = function(alnfile, treefile, type = "AA", format = "fasta", writealn=TRUE)
 {
   #prune the alignment to have only the species in the tree
