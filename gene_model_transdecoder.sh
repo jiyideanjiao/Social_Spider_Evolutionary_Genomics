@@ -2,7 +2,7 @@
 
 #SBATCH -p compute # partition (queue)
 #SBATCH --export=ALL
-#SBATCH --cpus-per-task=1
+#SBATCH -n {number}
 
 
 TransDecoder.LongOrfs -t {species_name}.fa
