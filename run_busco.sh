@@ -1,7 +1,7 @@
 #!/bin/bash -ve
 #SBATCH -p compute # partition (queue)
 #SBATCH --export=ALL
-#SBATCH --cpus-per-task=1
+#SBATCH -n {number}
 
 busco -i {genome assembly} \
         -l arachnida_odb10 \
