@@ -95,10 +95,6 @@ iqtree -s input.phy {option: model}
 ```
 snakemake --cores=1 -s snakefile_raxml
 ```
-##### Species tree inferrence with **ASTRAL** [link](https://github.com/smirarab/ASTRAL)
-```
-java -jar astral.5.7.5.jar -i in.tree -o out.tre
-```
 ### Divergence time estimation
 ##### Get calibration time point from relevant literatures or **Timmtree** [link](http://www.timetree.org/)
 ##### Estimate divergence time with mcmctree model in **PAML** [link](http://web.mit.edu/6.891/www/lab/paml.html)
