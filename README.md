@@ -70,10 +70,9 @@ sbatch run_busco.sh
 ```
 snakemake --cores=1 -s snakefile_ogg
 ```
-##### **OrthoFinder** [link](https://github.com/davidemms/OrthoFinder)
+##### **OMA** 
 ```
-orthofinder -f {path}/folder
-orthofinder -b {path}/folder
+OMA -n {number}
 ```
 ### Phylotranscriptomic analysis
 ##### Identify single-copy ortholog with **BUSCO** (hmmsearch)
