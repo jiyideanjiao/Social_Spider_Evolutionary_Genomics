@@ -80,9 +80,10 @@ orthofinder -b {path}/folder
 ```
 cp ~/busco/run_arachnida_odb10/busco_sequences/single_copy_busco_sequences/*.faa ./all_orthologs
 ```
-##### Align orthologs with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/)
+##### Align orthologs with **clustalo** [link](https://www.ebi.ac.uk/Tools/msa/clustalo/) and MUSCLE
 ```
 clustalo -i {ogg_id}.fa -o {ogg_id}.aln --auto
+muscle -in {ogg_id}.fa -o {ogg_id}.aln
 ```
 ##### Trim gaps with **trimAl** [link](http://trimal.cgenomics.org/getting_started_with_trimal_v1.2)
 ```
