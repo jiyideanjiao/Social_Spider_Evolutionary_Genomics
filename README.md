@@ -74,10 +74,7 @@ snakemake --cores=1 -s snakefile_ogg
 OMA -n {number}
 ```
 ### Phylotranscriptomic analysis
-##### Identify single-copy ortholog with **BUSCO** (hmmsearch)
-```
-cp ~/busco/run_arachnida_odb10/busco_sequences/single_copy_busco_sequences/*.faa ./all_orthologs
-```
+
 ##### Align orthologs with **clustalo** and **MUSCLE**
 ```
 clustalo -i {ogg_id}.fa -o {ogg_id}.aln --auto
